@@ -1,0 +1,364 @@
+<html><head><base href="localhost"/><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Casa A+: Associação Social Anglicana de Solidariedade</title>
+<style>
+:root {
+  --primary: #C41E3A;
+  --secondary: #FFC107;
+  --text: #333;
+  --light: #f8f9fa;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  line-height: 1.6;
+  color: var(--text);
+}
+
+.header {
+  background: var(--primary);
+  padding: 1rem;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+}
+
+.nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  width: 120px;
+  height: auto;
+}
+
+.nav-menu {
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-link {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-link:hover {
+  color: var(--secondary);
+}
+
+.hero {
+  background-image: url('assets/hero-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  margin-top: 70px;
+}
+
+.hero-content {
+  background: rgba(0,0,0,0.6);
+  padding: 2rem;
+  border-radius: 10px;
+}
+
+.projects {
+  padding: 4rem 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 3rem;
+  color: var(--primary);
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.project-card {
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+}
+
+.project-img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.project-content {
+  padding: 1.5rem;
+}
+
+.cta-button {
+  background: var(--secondary);
+  color: var(--primary);
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.cta-button:hover {
+  background: #e5ac00;
+}
+
+footer {
+  background: var(--primary);
+  color: white;
+  padding: 3rem 1rem;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.contact-info a {
+  color: white;
+  text-decoration: none;
+}
+
+.social-links {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+@media (max-width: 768px) {
+  .nav-menu {
+    display: none;
+  }
+  
+  .hero {
+    height: 60vh;
+  }
+}
+
+.donation-page {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.8);
+  z-index: 2000;
+  align-items: center;
+  justify-content: center;
+}
+
+.donation-content {
+  background: white;
+  padding: 2rem;
+  border-radius: 10px;
+  max-width: 500px;
+  width: 90%;
+  position: relative;
+}
+
+.close-button {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: var(--primary);
+}
+
+.donation-methods {
+  margin-top: 2rem;
+}
+
+.donation-method {
+  border: 1px solid #ddd;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 5px;
+}
+
+.donation-method h4 {
+  color: var(--primary);
+  margin-bottom: 0.5rem;
+}
+
+.copy-button {
+  background: var(--primary);
+  color: white;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-left: 1rem;
+}
+
+.show {
+  display: flex;
+}
+</style>
+</head>
+<body>
+<header class="header">
+  <nav class="nav-container">
+    <img src="logo.png" alt="Logo Casa A+" class="logo">
+    <div class="nav-menu">
+      <a href="#home" class="nav-link">Início</a>
+      <a href="https://www.casaamais.org.br/doe" class="cta-button">Doe Agora</a>
+    </div>
+  </nav>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Transformando Vidas no Tocantins</h1>
+      <p>Juntos podemos fazer a diferença na vida de quem mais precisa</p>
+      <a href="https://www.casaamais.org.br/doe" class="cta-button">Faça Parte Desta História</a>
+    </div>
+  </section>
+
+  <section class="projects" id="projects">
+    <h2 class="section-title">Nossos Projetos</h2>
+    <div class="project-grid">
+      <article class="project-card">
+        <img src="educacao.jpeg" alt="Crianças em atividade educacional" class="project-img" style="width: 300px; height: 300px;">
+        <div class="project-content">
+          <h3>Educação Transformadora</h3>
+          <p>Oferecemos suporte educacional para crianças e adolescentes em situação de vulnerabilidade.</p>
+        </div>
+      </article>
+      
+      <article class="project-card">
+        <img src="criancas.jpeg" alt="Distribuição de alimentos" class="project-img" style="width: 300px; height: 300px;">
+        <div class="project-content">
+          <h3>Dia Mundial das Crianças</h3>
+          <p>O Dia Mundial das Crianças Afetadas e Infectadas pelo HIV/AIDS é comemorado anualmente em 7 de maio.</p>
+        </div>
+      </article>
+      
+      <article class="project-card">
+        <img src="capacitacao.jpeg" alt="Oficina profissionalizante" class="project-img" style="width: 300px; height: 300px;">
+        <div class="project-content">
+          <h3>Capacitação Profissional</h3>
+          <p>Cursos e oficinas para geração de renda e autonomia financeira.</p>
+        </div>
+      </article>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="footer-content">
+    <div class="contact-info">
+      <h3>Endereço</h3>
+      <p>Quadra ARNO 61 Alameda 05 Qi-03 Lote 09</p>
+      <p>Plano Diretor Norte</p>
+      <p>Palmas - Tocantins</p>
+      <p>CEP: 77001-828</p>
+    </div>
+    
+    <div class="contact-info">
+      <h3>Contato</h3>
+      <p>WhatsApp: <a href="https://wa.me/5563992125769">63 99212-5769</a></p>
+      <p>Email: contato@casaamais.org.br</p>
+    </div>
+    
+    <div class="contact-info">
+      <h3>Doações</h3>
+      <p>PIX: 147363540002-94</p>
+      <p>Associação Social Anglicana de Solidariedade do Cerrado</p>
+      <div class="social-links">
+        <a href="https://facebook.com/casaamais"><i class="fab fa-facebook"></i></a>
+        <a href="https://instagram.com/casaamais"><i class="fab fa-instagram"></i></a>
+        <a href="https://youtube.com/casaamais"><i class="fab fa-youtube"></i></a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<div class="donation-page" id="donationPage">
+  <div class="donation-content">
+    <button class="close-button" onclick="closeDonationPage()">&times;</button>
+    <h2>Faça sua Doação</h2>
+    <p>Escolha uma das formas abaixo para contribuir com nosso trabalho:</p>
+    
+    <div class="donation-methods">
+      <div class="donation-method">
+        <h4>PIX</h4>
+        <p>CNPJ: <span id="pixKey">14736354000294</span>
+        <button class="copy-button" onclick="copyToClipboard('pixKey')">Copiar</button></p>
+        <small>Associação Social Anglicana de Solidariedade do Cerrado</small>
+      </div>
+      
+      <div class="donation-method">
+        <h4>Transferência Bancária</h4>
+        <p>Entre em contato conosco para obter os dados bancários:</p>
+        <a href="https://wa.me/5563992125769" class="cta-button">WhatsApp</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="https://kit.fontawesome.com/your-kit-code.js" crossorigin="anonymous"></script>
+<script>
+function openDonationPage(e) {
+  e.preventDefault();
+  document.getElementById('donationPage').classList.add('show');
+}
+
+function closeDonationPage() {
+  document.getElementById('donationPage').classList.remove('show');
+}
+
+function copyToClipboard(elementId) {
+  const text = document.getElementById(elementId).textContent;
+  navigator.clipboard.writeText(text).then(() => {
+    alert('Copiado para a área de transferência!');
+  }).catch(err => {
+    console.error('Erro ao copiar:', err);
+  });
+}
+
+// Adicionar evento de click em todos os botões de doação
+document.querySelectorAll('.cta-button').forEach(button => {
+  if (button.href.includes('/doe')) {
+    button.addEventListener('click', openDonationPage);
+  }
+});
+</script>
+</body></html>
