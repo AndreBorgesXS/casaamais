@@ -227,9 +227,22 @@ footer {
   margin-left: 1rem;
 }
 
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
 .show {
   display: flex;
 }
+
+@media (max-width: 768px) {
+    .container {
+        max-width: 90%;
+    }
+}
+
 </style>
 </head>
 <body>
@@ -252,6 +265,21 @@ footer {
     </div>
   </section>
 
+  <section class="about" id="about">
+    <div class="container">
+      <div class="about-content">
+        <img src="banner.jpg" alt="Distribuição de alimentos" class="project-img" style="width: 300px; height: 300px; align-items: center; justify-content: center;">
+        <h2 class="section-title">🩺 Rumo ao Selo Bronze! 🩺 </h2>
+        <p>O Governo do Estado do Tocantins está em busca do Selo Bronze de Boas Práticas, um reconhecimento importante no caminho para eliminar a transmissão vertical da Hepatite B. 🏆</p>
+        <p>Recentemente, recebemos a visita de uma equipe do Ministério da Saúde, que veio conhecer de perto os nossos serviços e indicadores. Eles irão elaborar um relatório para a Comissão Nacional de Validação, que decidirá se o Tocantins receberá o Selo.</p>
+        <p>📅 A entrega do selo está prevista para o final de novembro, em Brasília! </p>
+        <p>A Casa A+ e o Fórum Tocantinense de HIV/AIDS, Hepatites Virais e Tuberculose estão juntos nessa jornada, colaborando para essa importante conquista! 💪🌟</p>
+        <p>Vamos torcer pelo reconhecimento dos esforços para proteger a saúde dos Tocantinenses! ❤ </p>
+      </div>
+    </div>
+  </section>
+
+
   <section class="projects" id="projects">
     <h2 class="section-title">Nossos Projetos</h2>
     <div class="project-grid">
@@ -259,7 +287,7 @@ footer {
         <img src="educacao.jpeg" alt="Crianças em atividade educacional" class="project-img" style="width: 300px; height: 300px;">
         <div class="project-content">
           <h3>Educação Transformadora</h3>
-          <p>Oferecemos suporte educacional para crianças e adolescentes em situação de vulnerabilidade.</p>
+          <p>Oferecemos suporte educacional para mulheres cis e trans em situação de vulnerabilidade.</p>
         </div>
       </article>
       
